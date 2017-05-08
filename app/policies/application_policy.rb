@@ -1,4 +1,5 @@
 class ApplicationPolicy
+<<<<<<< HEAD
   attr_reader :user, :record
 
   def initialize(user, record)
@@ -51,3 +52,13 @@ class ApplicationPolicy
     end
   end
 end
+=======
+  attr_reader :user, :object
+
+  def initialize(user, object)
+    @user = user
+    @object = object
+  end
+end
+
+>>>>>>> 06cd0324f54cfb69343eb7c5843d92332e5bc208

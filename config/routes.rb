@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
 
+  Rails.application.routes.draw do
+    get '/auth/:provider/callback', to: 'sessions#create'
+  end
+
   resources :users, only: [:update] do
     collection do
       get :me

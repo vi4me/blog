@@ -14,7 +14,11 @@
       <td><%= article.title %></td>
       <td><%= article.text %></td>
       <td><%= link_to 'Show', article_path(article) %></td>
+<<<<<<< HEAD
       <% if policy(Article).moderator? %>
+=======
+      <% if policy(Article).admin? %>
+>>>>>>> 06cd0324f54cfb69343eb7c5843d92332e5bc208
       <td><%= link_to 'Edit', edit_article_path(article) %></td>
       <% end %>
       <% if policy(Article).admin? %>

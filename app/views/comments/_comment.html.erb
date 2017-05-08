@@ -9,7 +9,11 @@
 </p>
 
 <p>
+<<<<<<< HEAD
   <% if policy(Article).autor? %>
+=======
+  <% if policy(Article).moderator? %>
+>>>>>>> 06cd0324f54cfb69343eb7c5843d92332e5bc208
   <%= link_to 'Destroy Comment', [comment.article, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>

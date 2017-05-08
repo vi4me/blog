@@ -9,10 +9,22 @@
   </head>
 
   <body>
+<<<<<<< HEAD
     
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= render partial: 'layouts/menu' %>
+=======
+    <div id= 'user_nav'>
+      <% if user_signed_in? %>
+        Signed in as <% current_user.email %>. Not you?
+        <%= link_to 'Sing out', destroy_user_session_path  %>
+      <% else %>
+        <%= link_to 'Sing up', new_user_registration_path %> or 
+        <%= link_to 'Sing in', new_user_session_path %>
+      <% end %>
+    <div>
+>>>>>>> 06cd0324f54cfb69343eb7c5843d92332e5bc208
     <%= yield %>
   </body>
 </html>

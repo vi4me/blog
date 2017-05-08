@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170507033816) do
+=======
+ActiveRecord::Schema.define(version: 20170504072929) do
+>>>>>>> 06cd0324f54cfb69343eb7c5843d92332e5bc208
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -64,6 +68,7 @@ ActiveRecord::Schema.define(version: 20170507033816) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+<<<<<<< HEAD
     t.string   "first_name"
     t.string   "last_name"
     t.string   "avatar_file_name"
@@ -76,6 +81,12 @@ ActiveRecord::Schema.define(version: 20170507033816) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["role_id"], name: "index_users_on_role_id"
+=======
+    t.string   "role"
+    t.string   "references"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+>>>>>>> 06cd0324f54cfb69343eb7c5843d92332e5bc208
   end
 
 end
